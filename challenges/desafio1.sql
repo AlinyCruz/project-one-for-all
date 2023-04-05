@@ -97,10 +97,10 @@ VALUES
   (10, 'Feeling Good', 100, 8);
 
 CREATE TABLE SpotifyClone.historicos (
-  -- CONSTRAIN PRIMARY KEY(usuario_id, musica_id),
   usuario_id INT NOT NULL,
   musica_id INT NOT NULL,
   data_reproducao DATETIME NOT NULL,
+  CONSTRAINT PRIMARY KEY (usuario_id, musica_id),
   FOREIGN KEY (usuario_id) REFERENCES SpotifyClone.usuarios (usuario_id),
   FOREIGN KEY (musica_id) REFERENCES SpotifyClone.musicas (musica_id)
 )
@@ -126,9 +126,9 @@ VALUES
   (10, 3, '2015-12-13 08:30:22');
 
 CREATE TABLE SpotifyClone.seguindo (
-  -- CONSTRAIN PRIMARY KEY(usuario_id, artista_id),
   usuario_id INT NOT NULL,
   artista_id INT NOT NULL,
+  CONSTRAINT PRIMARY KEY (usuario_id, artista_id),
   FOREIGN KEY (usuario_id) REFERENCES SpotifyClone.usuarios (usuario_id),
   FOREIGN KEY (artista_id) REFERENCES SpotifyClone.artistas (artista_id)
 )
