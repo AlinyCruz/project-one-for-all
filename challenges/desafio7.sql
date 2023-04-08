@@ -1,7 +1,7 @@
 SELECT
 	art.nome_artista AS artista,
-    alb.nome_album AS album,
-    COUNT(seg.artista_id) AS pessoas_seguidoras
+  alb.nome_album AS album,
+  COUNT(seg.artista_id) AS pessoas_seguidoras
 
 FROM SpotifyClone.artistas AS art
 
